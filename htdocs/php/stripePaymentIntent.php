@@ -1,6 +1,7 @@
 <HTML>
 <?php
   require_once '/var/secrets/stripeTestKey.php';
+  require_once('vendor/autoload.php');
   
  	\Stripe\Stripe::setApiKey($key);
 
