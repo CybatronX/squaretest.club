@@ -1,5 +1,12 @@
 #!/bin/bash
+git status
 
-git add *
-git commit -m "another Deploy"
-git push origin master
+while true; do
+    read -p "Do you want to deploy these changes??" yn
+    case $yn in
+        [Yy]* ) git add *; git commit -m "another commit"; git push origin master;  break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
