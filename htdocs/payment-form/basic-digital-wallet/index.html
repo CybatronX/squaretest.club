@@ -8,6 +8,15 @@
 	<script type="text/javascript" src="sqpaymentform-basic.js">
 	</script>
 
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(event) {
+    		if (SqPaymentForm.isSupportedBrowser()) {
+      			paymentForm.build();
+      			paymentForm.recalculateSize();
+    		}
+  		});
+	</script>
+
 	<!-- link to the custom styles for SqPaymentForm -->
 	<link rel="stylesheet" type="text/css" href="sqpaymentform-basic.css">
 </head>
