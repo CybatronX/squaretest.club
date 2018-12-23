@@ -1,5 +1,14 @@
 <?php
-  $intent = 'test' # ... Fetch or create the PaymentIntent;
+  require_once '/var/secrets/stripeTestKey.php';
+  
+  echo $key;
+ // 	\Stripe\Stripe::setApiKey($key);
+
+	// \Stripe\PaymentIntent::create([
+	//   "amount" => 100,
+	//   "currency" => "eur",
+	//   "allowed_source_types" => ["card"],
+	// ]);
 ?>
 
 <HTML>
@@ -10,7 +19,6 @@
 	<button id="card-button" data-secret="<?= $intent->client_secret ?>">
 	  Submit Payment
 	</button> -->
-	<div> <?=$intent?> </div>div>
 </body>
 
 </HTML>
