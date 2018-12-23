@@ -1,9 +1,8 @@
 <?php
 	// Include the Square Connect API resources
 	require_once(__DIR__ . '/vendor/autoload.php');
+	require_once '/var/secrets/squareMainTestApp.php';
 
-	$accessToken = 'sq0atp-VIZMHV7uZSuhyKIF7o6MFA';
-	$locationId = '4G6PEANTEK6WM';
 // Create and configure a new API client object
 	$defaultApiConfig = new \SquareConnect\Configuration();
 	$defaultApiConfig->setAccessToken($accessToken);
