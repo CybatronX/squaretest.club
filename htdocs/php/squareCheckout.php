@@ -3,6 +3,8 @@
 	require_once(__DIR__ . '/vendor/autoload.php');
 	require_once '/var/secrets/squareMainTestApp.php';
 
+	echo $locationId;
+
 // Create and configure a new API client object
 	$defaultApiConfig = new \SquareConnect\Configuration();
 	$defaultApiConfig->setAccessToken($accessToken);
