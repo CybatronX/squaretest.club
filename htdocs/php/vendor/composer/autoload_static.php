@@ -9,11 +9,16 @@ class ComposerStaticInit1902a3ea438685ce047dae7da8ac3bf0
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Stripe\\' => 7,
             'SquareConnect\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
         'SquareConnect\\' => 
         array (
             0 => __DIR__ . '/..' . '/square/connect/lib',

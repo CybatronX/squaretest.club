@@ -1,5 +1,6 @@
 {
     "require": {
-        "square/connect": "^2.20181212"
+        "square/connect": "^2.20181212",
+        "stripe/stripe-php": "^6.27"
     }
 }
