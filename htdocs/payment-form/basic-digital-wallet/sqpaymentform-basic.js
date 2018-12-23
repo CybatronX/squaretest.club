@@ -1,8 +1,8 @@
 // Set the application ID
-var applicationId = "REPLACE_ME";
+var applicationId = prompt("Please enter your application ID", "sq0idp-C9F59pYGzEQh31txve6u_Q");
 
 // Set the location ID
-var locationId = "REPLACE_ME";
+var locationId = prompt("Please enter your location ID", "4G6PEANTEK6WM");;
 
 /*
  * function: requestCardNonce
