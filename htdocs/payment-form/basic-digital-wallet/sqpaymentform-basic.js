@@ -123,13 +123,13 @@ var paymentForm = new SqPaymentForm({
         countryCode: "US",
         total: {
           label: "MERCHANT NAME",
-          amount: "100",
+          amount: "1",
           pending: false
         },
         lineItems: [
           {
             label: "Subtotal",
-            amount: "100",
+            amount: "1",
             pending: false
           }
         ]
