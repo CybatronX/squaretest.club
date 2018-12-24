@@ -48,6 +48,7 @@ function registerElements(elements, exampleName) {
   var savedErrors = {};
   elements.forEach(function(element, idx) {
     element.on('change', function(event) {
+      console.log(event);
       if (event.error) {
         error.classList.add('visible');
         savedErrors[idx] = event.error.message;
