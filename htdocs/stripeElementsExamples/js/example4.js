@@ -94,8 +94,21 @@
         amount: 2100,
       };
 
+    var myNewShippingOptions = [
+    // The first shipping option in this list appears as the default
+    // option in the browser payment interface.
+      {
+        id: 'yo-dawg',
+        label: 'Handle this bitch!',
+        detail: 'Arrives in 5 to 7 days',
+        amount: 10,
+      },
+    ];
+
+
     ev.updateWith({
         status: 'success',
+        shippingOptions: myNewShippingOptions,
         displayItems: myDisplayItems,
         total:myTotal
       });
