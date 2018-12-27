@@ -89,12 +89,10 @@
       },
     ];
 
-    var myTotal = [
-      {
+    var myTotal = {
         label: 'Merchant Name',
         amount: 2100,
-      },
-    ];
+      };
 
     ev.updateWith({
         status: 'success',
