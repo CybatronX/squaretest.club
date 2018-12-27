@@ -1,7 +1,7 @@
 (function() {
   "use strict";
 
-  function makeid() {
+  function randomString() {
   var text = "";
   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -109,14 +109,14 @@
     // The first shipping option in this list appears as the default
     // option in the browser payment interface.
       {
-        id: makeid(),
-        label: makeid(),
+        id: randomString(),
+        label: randomString(),
         detail: 'Arrives in 5 to 7 days',
         amount: 10,
       },
       {
-        id: makeid(),
-        label: makeid(),
+        id: randomString(),
+        label: randomString(),
         detail: 'Arrives in 5 to 7 days',
         amount: 20,
       },
