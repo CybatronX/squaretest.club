@@ -48,7 +48,11 @@
       label: "Total"
     },
     requestShipping: true,
-    shippingOptions: [
+  });
+
+  paymentRequest.on('shippingaddresschange', function(ev) {
+    console.log(ev);
+    var myShippingOptions = [
     // The first shipping option in this list appears as the default
     // option in the browser payment interface.
       {
@@ -64,20 +68,15 @@
         amount: 100,
       },
     ],
-  });
-
-  paymentRequest.on('shippingaddresschange', function(ev) {
-    console.log(ev);
     if (ev.shippingAddress.country !== 'US') {
       ev.updateWith({status: 'invalid_shipping_address'});
     } 
-    // else {
-    //   // Perform server-side request to fetch shipping options
-    //   ev.updateWith({
-    //     status: 'success',
-    //     shippingOptions: result.supportedShippingOptions,
-    //   });
-    // }
+
+    ev.updateWith({
+        status: 'success',
+        shippingOptions: myShippingOptions,
+      });
+    }
   });
 
 
