@@ -144,7 +144,7 @@ var paymentForm = new SqPaymentForm({
     validateShippingContact: function (contact) {
 
       var validationErrorObj;
-      /* ADD CODE TO SET validationErrorObj IF ERRORS ARE FOUND */
+      console.log(contact);
       return validationErrorObj;
     },
 
