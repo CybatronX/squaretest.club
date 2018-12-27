@@ -67,6 +67,7 @@
   });
 
   paymentRequest.on('shippingaddresschange', function(ev) {
+    console.log(ev);
     if (ev.shippingAddress.country !== 'US') {
       ev.updateWith({status: 'invalid_shipping_address'});
     } 
