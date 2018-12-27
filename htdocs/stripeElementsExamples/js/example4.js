@@ -47,6 +47,7 @@
       amount: 2000,
       label: "Total"
     },
+    requestShipping: true,
     shippingOptions: [
     // The first shipping option in this list appears as the default
     // option in the browser payment interface.
