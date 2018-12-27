@@ -67,7 +67,7 @@
         detail: 'Arrives in 5 to 7 days',
         amount: 100,
       },
-    ],
+    ];
     if(ev.shippingAddress.country !== 'US') {
       ev.updateWith({status: 'invalid_shipping_address'});
     } 
