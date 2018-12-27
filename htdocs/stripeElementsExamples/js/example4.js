@@ -1,6 +1,17 @@
 (function() {
   "use strict";
 
+  function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 10; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+ }
+
+
   var elements = stripe.elements({
     fonts: [
       {
@@ -98,14 +109,14 @@
     // The first shipping option in this list appears as the default
     // option in the browser payment interface.
       {
-        id: 'new-default',
-        label: 'New default!',
+        id: makeid(),
+        label: makeid(),
         detail: 'Arrives in 5 to 7 days',
         amount: 10,
       },
       {
-        id: 'new-secondary',
-        label: 'New Secondary',
+        id: makeid(),
+        label: makeid(),
         detail: 'Arrives in 5 to 7 days',
         amount: 20,
       },
