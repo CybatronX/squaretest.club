@@ -68,7 +68,7 @@
         amount: 100,
       },
     ],
-    if (ev.shippingAddress.country !== 'US') {
+    if(ev.shippingAddress.country !== 'US') {
       ev.updateWith({status: 'invalid_shipping_address'});
     } 
 
