@@ -98,10 +98,16 @@
     // The first shipping option in this list appears as the default
     // option in the browser payment interface.
       {
-        id: 'yo-dawg',
-        label: 'Handle this bitch!',
+        id: 'new-default',
+        label: 'New default!',
         detail: 'Arrives in 5 to 7 days',
         amount: 10,
+      },
+      {
+        id: 'new-secondary',
+        label: 'New Secondary',
+        detail: 'Arrives in 5 to 7 days',
+        amount: 20,
       },
     ];
 
