@@ -57,8 +57,8 @@
         amount: 0,
       },
       {
-        id: 'free-shipping',
-        label: 'Free shipping',
+        id: 'costly-shipping',
+        label: 'Costly shipping',
         detail: 'Arrives in 5 to 7 days',
         amount: 100,
       },
