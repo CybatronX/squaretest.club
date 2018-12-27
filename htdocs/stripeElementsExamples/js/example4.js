@@ -46,8 +46,39 @@
     total: {
       amount: 2000,
       label: "Total"
-    }
+    },
+    shippingOptions: [
+    // The first shipping option in this list appears as the default
+    // option in the browser payment interface.
+      {
+        id: 'free-shipping',
+        label: 'Free shipping',
+        detail: 'Arrives in 5 to 7 days',
+        amount: 0,
+      },
+      {
+        id: 'free-shipping',
+        label: 'Free shipping',
+        detail: 'Arrives in 5 to 7 days',
+        amount: 100,
+      },
+    ],
   });
+
+  paymentRequest.on('shippingaddresschange', function(ev) {
+    if (ev.shippingAddress.country !== 'US') {
+      ev.updateWith({status: 'invalid_shipping_address'});
+    } 
+    // else {
+    //   // Perform server-side request to fetch shipping options
+    //   ev.updateWith({
+    //     status: 'success',
+    //     shippingOptions: result.supportedShippingOptions,
+    //   });
+    // }
+  });
+
+
   paymentRequest.on("token", function(result) {
     var example = document.querySelector(".example4");
     example.querySelector(".token").innerText = result.token.id;
