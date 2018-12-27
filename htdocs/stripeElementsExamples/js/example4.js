@@ -47,7 +47,7 @@
       amount: 2000,
       label: "Total"
     },
-    requestShipping: true,
+    requestShipping: true
   });
 
   paymentRequest.on('shippingaddresschange', function(ev) {
@@ -76,6 +76,30 @@
     ev.updateWith({
         status: 'success',
         shippingOptions: myShippingOptions,
+      });
+  });
+
+  paymentRequest.on('shippingoptionchange', function(ev) {
+    console.log(ev);
+    var myDisplayItems = [
+      {
+        label: 'Special Tax',
+        detail: 'Arrives in 5 to 7 days',
+        amount: 100,
+      },
+    ];
+
+    var myTotal = [
+      {
+        label: 'Merchant Name',
+        amount: 2100,
+      },
+    ];
+
+    ev.updateWith({
+        status: 'success',
+        displayItems: myDisplayItems,
+        total:myTotal
       });
   });
 
