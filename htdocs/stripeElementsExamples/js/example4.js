@@ -58,6 +58,12 @@
       amount: 2000,
       label: "Total"
     },
+    displayItems:[
+      {
+        amount:300,
+        label:"Tax"
+      }
+    ],
     requestShipping: true
   });
 
