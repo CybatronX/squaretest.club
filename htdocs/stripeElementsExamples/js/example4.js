@@ -61,7 +61,7 @@
     displayItems:[
       {
         amount:300,
-        label:"Tax"
+        label:"Tax-1"
       }
     ],
     requestShipping: true
