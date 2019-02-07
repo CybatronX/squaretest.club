@@ -23,8 +23,8 @@
 
 <body>
 	<div class=container>
-		CardHolder Name: <input id="cardholder-name" type="text">
-		<div id="card-element"></div>
+		CardHolder Name: <input id="cardholder-name" type="text"> <br><br>
+		<div id="card-element" style="border-size:solid; border-size:1px"></div><br><br>
 		<button id="card-button" data-secret="<?= $intent->client_secret ?>">
 		  Submit Payment
 		</button>
