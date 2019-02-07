@@ -14,16 +14,23 @@
 
 <head>
 	<script src="https://js.stripe.com/v3/"></script>
+	<style>
+		.container {
+			width:400px;
+		}
+	</style>
 </head>
 
 <body>
-	<input id="cardholder-name" type="text">
-	<div id="card-element"></div>
-	<button id="card-button" data-secret="<?= $intent->client_secret ?>">
-	  Submit Payment
-	</button>
+	<div class=container>
+		CardHolder Name: <input id="cardholder-name" type="text">
+		<div id="card-element"></div>
+		<button id="card-button" data-secret="<?= $intent->client_secret ?>">
+		  Submit Payment
+		</button>
+	</div>
 
-	<script>
+	<script> 
 		var stripe = Stripe('pk_test_bC4fwLOsJOPNerzh2wQz8KGN', {
 		  betas: ['payment_intent_beta_3']
 		});
